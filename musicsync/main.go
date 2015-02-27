@@ -10,7 +10,6 @@ import (
 	"log"
 	"math/rand"
 	"os"
-	"os/user"
 	"path/filepath"
 	"strings"
 	"time"
@@ -21,14 +20,13 @@ var (
 )
 
 func main() {
-	if len(os.Args) < 2 {
-		fmt.Printf("Usage : %s destPath\n", os.Args[0])
+	if len(os.Args) < 3 {
+		fmt.Printf("Usage : %s srcPath destPath\n", os.Args[0])
 		os.Exit(1)
 	}
 
-	u, _ := user.Current()
-	srcPath := filepath.Join(u.HomeDir, "Music/iTunes/iTunes Media/Music")
-	destPath := os.Args[1]
+	srcPath := os.Args[1]
+	destPath := os.Args[2]
 
 	if _, err := os.Stat(destPath); os.IsNotExist(err) {
 		fmt.Println(NoDestPath)
