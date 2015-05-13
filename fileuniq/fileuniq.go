@@ -19,7 +19,7 @@ var duplicateFileList []string
 var opts struct {
 	Path         string `short:"p" long:"path" description:"file path" required:"true"`
 	DelDuplicate bool   `short:"d" long:"delete" description:"delete duplicate file or just output the file name" default:"false"`
-	Rename       bool   `short:"r" long:"rename" description:"rename use md5 value" default:"true"`
+	Rename       bool   `short:"r" long:"rename" description:"rename use md5 value" default:"false"`
 }
 
 func main() {
