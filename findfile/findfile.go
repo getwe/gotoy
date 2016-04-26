@@ -18,7 +18,7 @@ var opts struct {
 	From   string `short:"f" long:"from" description:"copy file from path" required:"true" default:"WechatPath"`
 	To     string `short:"t" long:"to" description:"copy file destination" required:"true"`
 	Suffix string `short:"s" long:"suffix" description:"file suffix" required:"true" default:"mp4"`
-	Move   bool   `short:"m" long:"move" description:"move file or copy" default:"false"`
+	Move   bool   `short:"m" long:"move" description:"move file or copy"`
 }
 
 var fileset map[string]string
