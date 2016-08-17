@@ -3,15 +3,16 @@ package main
 import (
 	"crypto/md5"
 	"fmt"
-	"github.com/fatih/color"
-	"github.com/getwe/figlet4go"
-	flags "github.com/jessevdk/go-flags"
 	"io"
 	"math/rand"
 	"os"
 	"path/filepath"
 	"strings"
 	"time"
+
+	"github.com/fatih/color"
+	"github.com/getwe/figlet4go"
+	flags "github.com/jessevdk/go-flags"
 )
 
 var opts struct {
@@ -158,6 +159,6 @@ func moveFile(from, to string) error {
 }
 
 func getWeChatPath() string {
-	wx := "/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/Wechat"
+	wx := "/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/"
 	return fmt.Sprintf("%s%s", os.Getenv("HOME"), wx)
 }
