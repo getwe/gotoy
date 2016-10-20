@@ -76,6 +76,8 @@ func calRate(sum, months, rate float64) {
 		money = money - sum/months
 	}
 
+	fmt.Printf("等本等息,每个月固定还款%.3f\n", sum/months+InterestPerMonth)
+
 	fmt.Printf("贷款总偿还利息%.3f\t投资总收益利息%.3f\n",
 		allInterest, earn)
 }
